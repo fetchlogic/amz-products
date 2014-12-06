@@ -6,11 +6,18 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "files" : [
+  "files": [
     "index.js",
     "README.md",
     "package.json"
   ],
+  "keywords": ["amazon", "products api", "amazon product advertising api"],
+  "homepage": "https://github.com/fetchlogic/amz-products",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fetchlogic/amz-products"
+  },
+  "bugs": "https://github.com/fetchlogic/amz-products/issues",
   "author": "Justin Davis (http://justindavis.co)",
   "license": "ISC",
   "dependencies": {
