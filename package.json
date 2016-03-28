@@ -1,6 +1,6 @@
 {
   "name": "amz-products",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A thin wrapper for the Amazon Products API, supporting all methods on the API.",
   "main": "index.js",
   "scripts": {

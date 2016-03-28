@@ -7,6 +7,7 @@ module.exports = function(credentials) {
     awsId: credentials.accessKeyId,
     awsSecret: credentials.secretAccessKey,
     assocId: credentials.associateId,
+    endPoint: determineLocale(credentials.locale),
     xml2jsOptions: {
       explicitArray: false,
       ignoreAttrs: true
@@ -113,5 +114,60 @@ module.exports = function(credentials) {
     }, function(err, res) {
       callback(err, res);
     });
+  }
+}
+
+function determineLocale(locale) {
+  if (locale) {
+    locale = locale.toUpperCase();
+  }
+
+  switch (locale) {
+    case 'BR':
+      return 'webservices.amazon.com.br';
+      break;
+
+    case 'CA':
+      return 'webservices.amazon.ca';
+      break;
+
+    case 'CN':
+      return 'webservices.amazon.cn';
+      break;
+
+    case 'FR':
+      return 'webservices.amazon.fr';
+      break;
+
+    case 'DE':
+      return 'webservices.amazon.de';
+      break;
+
+    case 'IN':
+      return 'webservices.amazon.in';
+      break;
+
+    case 'IT':
+      return 'webservices.amazon.it';
+      break;
+
+    case 'JP':
+      return 'webservices.amazon.co.jp';
+      break;
+
+    case 'MX':
+      return 'webservices.amazon.com.mx';
+      break;
+
+    case 'ES':
+      return 'webservices.amazon.es';
+      break;
+
+    case 'UK':
+      return 'webservices.amazon.co.uk';
+      break;
+
+    default:
+      return 'webservices.amazon.com';
   }
 }
